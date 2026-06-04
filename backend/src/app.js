@@ -4,6 +4,8 @@ const cors = require('cors');
 // Importar rutas
 const testRoutes = require('./routes/test.routes');
 const authRoutes = require('./routes/auth.routes');
+const disponibilidadRoutes = require('./routes/disponibilidad.routes');
+const citaRoutes = require('./routes/cita.routes');
 
 const app = express();
 
@@ -19,5 +21,17 @@ app.get('/', (req, res) => {
 // Conectar rutas
 app.use('/api', testRoutes);
 app.use('/api/auth', authRoutes);
+
+// NUEVA RUTA DISPONIBILIDAD MÉDICA
+app.use(
+  '/api/disponibilidad',
+  disponibilidadRoutes
+);
+
+//cita ruta 
+app.use(
+  '/api/citas',
+  citaRoutes
+);
 
 module.exports = app;
