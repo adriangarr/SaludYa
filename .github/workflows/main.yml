@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+  pull_request:
+    branches:
+      - main
+
 jobs:
   backend:
 
@@ -16,16 +20,14 @@ jobs:
 
     steps:
 
-      - name: Clonar repositorio
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Instalar Node
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - name: Instalar dependencias
-        run: npm install
+      - run: npm install
 
-      - name: Ejecutar pruebas
-        run: npm test
+      - run: npm test
+
+      - run: echo "Build ejecutado"
