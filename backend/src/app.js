@@ -15,7 +15,7 @@ app.use(express.json());
 
 // Ruta base
 app.get('/', (req, res) => {
-  res.send('API SaludYa funcionando 🚀');
+  res.send('API SaludYa funcionandos 🚀');
 });
 
 // Conectar rutas
