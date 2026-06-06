@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import "../App.css";
 
 import {
@@ -283,7 +284,7 @@ function Register() {
 
           <p className="login-link">
             ¿Ya tienes cuenta?
-            <span> Iniciar sesión</span>
+            <Link to="/"> Iniciar sesión</Link>
           </p>
 
         </form>
