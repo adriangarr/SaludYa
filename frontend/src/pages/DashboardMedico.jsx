@@ -25,7 +25,7 @@ function DashboardMedico() {
     try {
 
       const response = await fetch(
-        `http://localhost:5000/api/citas/medico/${usuario._id}`
+        `https://saludya-backend-539x.onrender.com/api/citas/medico/${usuario._id}`
       );
 
       const data = await response.json();
@@ -51,7 +51,7 @@ function DashboardMedico() {
     try {
 
       const response = await fetch(
-        `http://localhost:5000/api/citas/${id}`,
+        `https://saludya-backend-539x.onrender.com/api/citas/${id}`,
         {
           method: 'DELETE'
         }
@@ -86,7 +86,7 @@ function DashboardMedico() {
     try {
 
       const response = await fetch(
-        'http://localhost:5000/api/disponibilidad',
+        'https://saludya-backend-539x.onrender.com/api/disponibilidad',
         {
           method: 'POST',
           headers: {
