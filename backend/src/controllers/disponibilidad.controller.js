@@ -1,3 +1,11 @@
+/**
+ * Crear una nueva dispobibilidad médica
+ * @route get /api/citas/paciente/6a1372f795f326b4fd3296a5
+ * @param {Object} req
+ * @param {Object} res
+ */
+
+
 const Disponibilidad = require('../models/Disponibilidad');
 
 const guardarDisponibilidad = async (req, res) => {

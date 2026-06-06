@@ -1,3 +1,9 @@
+/**
+ * Crear una nueva cita médica
+ * @route POST /api/citas
+ * @param {Object} req
+ * @param {Object} res
+ */
 const Cita = require('../models/Cita');
 
 const crearCita = async (req, res) => {

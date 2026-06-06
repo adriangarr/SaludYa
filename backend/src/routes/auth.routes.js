@@ -1,3 +1,10 @@
+/**
+ * Autentica el usuario
+ * @route POST /api/auth/login
+ * @param {Object} req
+ * @param {Object} res
+ */
+
 const express = require('express');
 const router = express.Router();
 

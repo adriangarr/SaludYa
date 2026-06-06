@@ -6,6 +6,8 @@ const testRoutes = require('./routes/test.routes');
 const authRoutes = require('./routes/auth.routes');
 const disponibilidadRoutes = require('./routes/disponibilidad.routes');
 const citaRoutes = require('./routes/cita.routes');
+const swaggerUi = require('swagger-ui-express');
+const swaggerSpec = require('./config/swagger');
 
 const app = express();
 
@@ -32,6 +34,13 @@ app.use(
 app.use(
   '/api/citas',
   citaRoutes
+);
+
+//swagger
+app.use(
+  '/api-docs',
+  swaggerUi.serve,
+  swaggerUi.setup(swaggerSpec)
 );
 
 module.exports = app;
